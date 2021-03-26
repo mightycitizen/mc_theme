@@ -1,0 +1,28 @@
+{%
+  set classes = [
+    'layout-container',
+  ]
+%}
+<div {{ attributes.addClass(classes) }}>
+
+  {% if page.header %}
+    {{ page.header }}
+  {% endif %}
+
+  <main role="main" class="grid-container">
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+    <div class="layout-featured cell small-12">
+      {{ page.featured }}
+    </div>
+    <div class="layout-content cell small-12">
+      {{ page.content }}
+    </div>
+  </main>
+
+  <footer>
+    {% if page.footer %}
+      {{ page.footer }}
+    {% endif %}
+  </footer>
+
+</div>

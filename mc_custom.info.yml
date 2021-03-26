@@ -1,0 +1,17 @@
+name: MC Custom
+type: theme
+description: This is SSB sub theme of Stable9
+core_version_requirement: ^9
+# Defines the base theme
+base theme: stable9
+# Defines libraries group in which we can add css/js.
+libraries:
+  - mc_custom/global-styling
+# Regions
+regions:
+  header: Header
+  featured: Featured
+  content: Content
+  sidebar_first: First sidebar
+  sidebar_second: Second sidebar
+  footer: Footer
