@@ -1,0 +1,46 @@
+
+
+
+@function map-set($map, $key, $value) {
+  $new: ($key: $value);
+  @return map-merge($map, $new);
+}
+
+$additional-palette: ();
+
+@mixin generateVariants($map, $color){
+  $variants: map-get($map, 'variants');
+  @each $key, $value in $variants {
+
+    $default-color: map-get($map, 'default');
+    $output: $value;
+    @if (is-percentage($value)){
+      $output: scale-color($default-color,$lightness: $output);
+    }
+    .bg-#{$color}{
+      background-color: $default-color;
+    }
+    .bg-#{$color}-#{$key}{
+      background-color: $output;
+    }
+
+    .color-#{$color}{
+      color: $default-color;
+    }
+    .color-#{$color}-#{$key}{
+      color: $output;
+    }
+
+    $additional-palette: map-set($additional-palette, '#{$color}-#{$key}', $output) !global;
+  }
+}
+
+@include generateVariants($primary, 'primary');
+@include generateVariants($secondary, 'secondary');
+@include generateVariants($tertiary, 'tertiary');
+@include generateVariants($accent, 'accent');
+@include generateVariants($gray, 'gray');
+
+
+
+//@debug $additional-palette;

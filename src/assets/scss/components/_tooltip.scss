@@ -1,0 +1,44 @@
+/* ------------------ Tooltip ------------------ */
+
+.tippy-box,
+.tippy-tooltip{
+  background: $primary-color;
+  border-radius: 3px;
+  color: $white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  max-width: 10.25rem !important;
+  padding: 0.6rem 0.65rem;
+  text-align: left;
+  h2,
+  h3,
+  h4{
+    font-size: rem-calc(16);
+  }
+}
+
+.tippy-close{
+  display: none;
+}
+.tippy-content {
+  padding: 0;
+}
+.tippy-tooltip[data-placement^=left]>.tippy-arrow{
+  border-right-color: $primary-color;
+}
+.tippy-arrow{
+  border-right-color: $primary-color;
+  color: $primary-color;
+  height: 0;
+  width: 0;
+  &:before{
+    display: inline-block;
+  }
+}
+
+[data-tippy-content]{
+  margin-left: rem-calc(3);
+  display: inline-block;
+  vertical-align: middle;
+  color: $primary-color;
+}

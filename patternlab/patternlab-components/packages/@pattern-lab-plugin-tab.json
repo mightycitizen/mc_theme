@@ -1,0 +1,13 @@
+{
+  "name": "@pattern-lab/plugin-tab",
+  "templates": [],
+  "stylesheets": [],
+  "javascripts": [
+    "patternlab-components/pattern-lab/@pattern-lab-plugin-tab/js/@pattern-lab-plugin-tab.js"
+  ],
+  "onready": "PluginTab.init()",
+  "callback": "",
+  "tabsToAdd": [
+    "json"
+  ]
+}

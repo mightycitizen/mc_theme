@@ -1,38 +1,62 @@
 {
-  "name": "foundation-sites-template",
-  "version": "1.0.0",
-  "description": "Basic template for a new Foundation for Sites project.",
-  "main": "gulpfile.js",
+  "name": "rain_theme",
+  "version": "2.0.0",
   "scripts": {
-    "start": "gulp",
-    "build": "gulp sass"
+    "start": "npm run watch",
+    "build": "gulp --production",
+    "compile": "gulp compile",
+    "watch": "gulp watch",
+    "styleguide": "gulp styleguide",
+    "compress": "gulp compress",
+    "lint": "gulp lint",
+    "clean": "gulp clean",
+    "gulp": "gulp"
   },
-  "author": "ZURB <foundation@zurb.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/zurb/foundation-sites/issues",
-    "email": "foundation@zurb.com"
+  "browserslist": [
+    "last 2 versions",
+    "not dead"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/register": "^7.0.0",
+    "@pattern-lab/core": "^5.14.1",
+    "@pattern-lab/engine-twig-php": "^5.14.1",
+    "@pattern-lab/uikit-workshop": "^5.14.1",
+    "babel-loader": "^8.0.4",
+    "browser-sync": "^2.26.14",
+    "del": "^4.1.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-eslint": "^5.0.0",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-json-css": "^0.2.3",
+    "gulp-json-data-to-sass": "^1.0.1",
+    "gulp-order": "^1.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-lint": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "raw-loader": "^4.0.2",
+    "webpack-stream": "^6.1.1"
   },
   "dependencies": {
-    "foundation-sites": "^6.6.0",
-    "jquery": ">=3.0.0",
-    "motion-ui": "~2.0.0",
-    "node-sass": "^4.12.0",
-    "what-input": "^5.1.2"
-  },
-  "devDependencies": {
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^4.1.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-livereload": "^3.8.1",
-    "gulp-load-plugins": "^2.0.4",
-    "gulp-sass": "^4.0.1",
-    "gulp-sass-glob": "^1.0.8",
-    "gulp-sourcemaps": "^2.6.4"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/zurb/foundation-sites-template.git"
-  },
-  "private": true
+    "@pattern-lab/plugin-tab": "^5.13.0",
+    "babel-polyfill": "^6.26.0",
+    "dart-sass": "^1.25.0",
+    "foundation-sites": "^6.6.3",
+    "jquery": "^3.5.1",
+    "litepicker": "^2.0.11",
+    "lity": "^2.4.1",
+    "motion-ui": "^2.0.3",
+    "sass": "^1.32.8",
+    "selectize": "^0.12.6",
+    "slick-carousel": "^1.8.1",
+    "tippy.js": "^6.3.1",
+    "twig": "^1.15.4",
+    "vanilla-lazyload": "^17.3.1",
+    "yargs": "^16.2.0"
+  }
 }

@@ -1,0 +1,21 @@
+{
+  "buttons":[
+
+    {
+      "url": "",
+      "modifier": "",
+      "text": "Button 1"
+    },
+    {
+      "url": "",
+      "modifier": "",
+      "text": "Button 2"
+    },
+    {
+      "url": "",
+      "modifier": "",
+      "text": "Button 3"
+    }
+
+  ]
+}

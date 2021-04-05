@@ -1,0 +1,11 @@
+<li class="accordion-item {% if item.accordion_instance == "1" %}is-active{% endif %}" data-accordion-item>
+  <button tabindex="0" class="accordion-title" aria-controls="accordion-{{ item.accordion_instance }}" id="accordion-toggle-{{ item.accordion_instance }}">
+    {% if item.icon %}
+      <span class="accordion-icon {% if item.icon != 1 %}icon-{{ item.icon }}{% endif %}"></span>
+    {% endif %}
+    {{ item.heading }}
+  </button>
+  <div class="accordion-content" data-tab-content id="accordion-{{ item.accordion_instance }}" aria-hidden="true" aria-labelledby="accordion-{{ item.accordion_instance }}">
+    {{ item.content }}
+  </div>
+</li>

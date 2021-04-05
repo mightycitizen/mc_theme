@@ -1,0 +1,23 @@
+@import "../vendor/icomoon/variables";
+.pagination{
+  &-previous, &-next{
+    a{
+      &:hover{
+        background-color: transparent;
+        color: $primary-color;
+      }
+    }
+  }
+  &-previous{
+    &.disabled:before, a:before{
+      font-family: $icomoon-font-family;
+      content: $icon-chevron-left;
+    }
+  }
+  &-next{
+    &.disabled:after, a:after{
+      font-family: $icomoon-font-family;
+      content: $icon-chevron-right;
+    }
+  }
+}

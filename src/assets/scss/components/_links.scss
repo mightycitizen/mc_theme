@@ -1,0 +1,15 @@
+@import '../vendor/icomoon/variables';
+.read-more{
+  position: relative;
+  box-shadow: 0 3px $secondary-color;
+  padding-bottom: 2px;
+
+
+  &:after{
+    font-family: $icomoon-font-family;
+    content: $icon-chevron-right;
+    margin-left: rem-calc(7);
+    font-size: rem-calc(14);
+    // position: absolute; // underline not underneath arrow
+  }
+}

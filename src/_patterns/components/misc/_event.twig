@@ -1,0 +1,29 @@
+<div>
+  {% for event in events %}
+    <div class="card">
+      <div class="card-section">
+        <h2>{{ event.title }}</h2>
+        <p>{{ event.description }}</p>
+        {% if event.active %}
+          <span class="label">Active</span>
+        {% endif %}
+        <ul>
+          {% for category in event.categories %}
+            <li>
+              <a href="{{ category.url }}">{{ category.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+        <ul>
+          {% for group in event.groups %}
+            <li>
+              <a href="{{ group.url }}">{{ group.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+

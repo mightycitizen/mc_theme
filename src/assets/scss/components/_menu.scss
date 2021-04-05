@@ -1,0 +1,35 @@
+@import '../vendor/icomoon/variables';
+
+
+@mixin removeArrow($arrow-size){
+  &:after{
+    font-family: $icomoon-font-family;
+    content: $icon-chevron-down !important;
+    border: none !important;
+    width: rem-calc($arrow-size) !important;
+    height: rem-calc($arrow-size) !important;
+    margin-top: rem-calc(-0.5*$arrow-size) !important;
+  }
+}
+.accordion-menu {
+  .is-accordion-submenu-parent:not(.has-submenu-toggle) {
+    > a{
+      @include removeArrow(20px);
+
+    }
+    &[aria-expanded="true"]{
+      > a:after{
+        transform: scaleY(-1);
+      }
+    }
+  }
+}
+
+.dropdown{
+  > li.is-dropdown-submenu-parent {
+    > a{
+      padding-right: rem-calc(30) !important;
+      @include removeArrow(20px);
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.top-bar{
+  .top{
+    > li{
+      > a{
+        color: inherit;
+        &:hover, &:focus, &.hover{
+          color: inherit;
+        }
+      }
+      &.is-active{
+        > a{
+          color: inherit !important;
+        }
+      }
+    }
+  }
+}

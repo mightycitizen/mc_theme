@@ -1,0 +1,13 @@
+.section{
+  padding: rem-calc(40 0);
+  *:last-child{
+    margin-bottom: 0;
+  }
+
+  &--padded{
+    padding: rem-calc(80 0);
+  }
+  &--tight{
+    padding: rem-calc(20 0);
+  }
+}

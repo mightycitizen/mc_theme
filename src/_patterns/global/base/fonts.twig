@@ -1,0 +1,15 @@
+{% set fonts = [
+  {
+    label: "Primary",
+    fontFamily: primaryFontFamily
+  },
+  {
+    label: "Secondary",
+    fontFamily: secondaryFontFamily
+  }
+] %}
+{% for font in fonts %}
+  <p>{{ font.label }} font: {{ font.fontFamily }};</p>
+  <p><em>{{ font.label }} font italic: {{ font.fontFamily }}</em></p>
+  <p><strong>{{ font.label }} font bold: {{ font.fontFamily }};</strong></p>
+{% endfor %}

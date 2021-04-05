@@ -1,0 +1,65 @@
+<header class="l-header">
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x align-middle">
+      <div class="cell medium-4">Header</div>
+      <div class="cell medium-7">
+        <div  data-responsive-toggle="responsive-menu" data-hide-for="medium">
+  <button class="hamburger" type="button" id="hamburger" data-toggle="responsive-menu" data-toggler=".is-active" aria-label="Toggle navigation">
+  <span class="hamburger-icon">
+    <span class="hamburger-icon-bar"></span>
+  </span>
+  <span class="hamburger-text">Menu</span>
+</button>
+</div>
+
+<div class="top-bar" id="responsive-menu" data-toggler=".is-active">
+  <div class="top-bar-left">
+    <ul class="vertical medium-horizontal menu top" data-responsive-menu="accordion medium-dropdown">
+      <li>
+        <a href="#">Item 1</a>
+        <ul class="vertical menu">
+          <li><a href="#">Item 1A</a></li>
+          <li><a href="#">Item 1B</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Item 2</a>
+        <ul class="vertical menu">
+          <li><a href="#">Item 2A</a></li>
+          <li><a href="#">Item 2B</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Item 3</a>
+        <ul class="vertical menu">
+          <li><a href="#">Item 3A</a></li>
+          <li><a href="#">Item 3B</a></li>
+        </ul>
+      </li>
+    </ul>
+
+  </div>
+</div>
+      </div>
+      <div class="cell medium-1">
+        <button data-toggle="search-form search-toggle" data-toggler="is-active" id="search-toggle" class="search-toggle">
+          <span class="show-for-sr">Search</span>
+          <span class="icon-search"></span>
+        </button>
+        <div id="search-form" data-toggler=".hide" class="hide search-form">
+          <form action="">
+  <div class="input-group simple">
+    <input class="input-group-field" type="search">
+    <div class="input-group-button">
+      <button type="submit"  value="Submit">
+        <span class="show-for-sr">Search</span>
+        <span class="icon-search"></span>
+      </button>
+    </div>
+  </div>
+</form>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

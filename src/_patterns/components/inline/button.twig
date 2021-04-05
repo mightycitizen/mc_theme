@@ -1,0 +1,40 @@
+{% set sets = [
+  { icon: false },
+  { icon: "chevron-right" }
+] %}
+
+{% for set in sets %}
+  <div>
+    {% include 'components/inline/_button.twig' with {button: {
+        "url": button.url,
+        "modifier": button.modifier,
+        "text": button.text,
+        "icon": set.icon
+      }} only %}
+    {% include 'components/inline/_button.twig' with {button: {
+        "url": button.url,
+        "modifier": button.modifier ~ " secondary",
+        "text": button.text,
+        "icon": set.icon
+      }} only %}
+    {% include 'components/inline/_button.twig' with {button: {
+        "url": button.url,
+        "modifier": button.modifier ~ " success",
+        "text": button.text,
+        "icon": set.icon
+      }} only %}
+    {% include 'components/inline/_button.twig' with {button: {
+        "url": button.url,
+        "modifier": button.modifier ~ " alert",
+        "text": button.text,
+        "icon": set.icon
+      }} only %}
+
+    {% include 'components/inline/_button.twig' with {button: {
+        "url": button.url,
+        "modifier": button.modifier ~ " warning",
+        "text": button.text,
+        "icon": set.icon
+      }} only %}
+  </div>
+{% endfor %}

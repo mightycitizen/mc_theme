@@ -1,0 +1,126 @@
+<section class="section bg-primary-darker">
+  <div class="grid-container">
+    <h2>Ajax</h2>
+    <div class="grid-x grid-margin-x" data-sticky-container id="event-content">
+      <div class="cell medium-4" >
+        <a href="#filters" data-lity class="hide-for-medium button">Filters</a>
+        <div id="filters" class="lity-mobile">
+          <form data-ajaxify-form="events" data-sticky data-sticky-on="medium" data-anchor="event-content">
+            <div data-ajaxify-toggles="events" class="button-group tiny"></div>
+            <div>
+              <label for="keywords">Keywords</label>
+              <div class="input-group simple">
+                <div class="input-wrapper">
+                  <input type="hidden" name="keywords_fields" value="title,description"><!-- if hitting the endpoint to filter, otherwise use data-filter-keywords below -->
+                  <input type="text" id="keywords" placeholder="Search title, description" data-filter-keywords="title,description" name="keywords" class="input-group-field">
+                  <button type="button" data-clear="keywords" class="input-clear">
+                    <span class="icon-cross"></span>
+                    <span class="show-for-sr">Clear keywords</span>
+                  </button>
+                </div>
+                <div class="input-group-button">
+                  <button type="button"  value="Submit">
+                    <span class="show-for-sr">Search</span>
+                    <span class="icon-search"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <fieldset>
+              <legend>Radio Category</legend>
+              <span>
+                <input data-filter class="custom" type="radio" name="categories" id="category_all" value="" checked/>
+                <label for="category_all">All</label>
+              </span>
+                              <span>
+                  <input data-filter class="custom" type="radio" name="categories" id="category_0" value="0"/>
+                  <label for="category_0">Category 0</label>
+                </span>
+                              <span>
+                  <input data-filter class="custom" type="radio" name="categories" id="category_1" value="1"/>
+                  <label for="category_1">Category 1</label>
+                </span>
+                              <span>
+                  <input data-filter class="custom" type="radio" name="categories" id="category_2" value="2"/>
+                  <label for="category_2">Category 2</label>
+                </span>
+                          </fieldset>
+            <hr>
+            <fieldset data-filter-checkbox="groups">
+              <legend>Checkbox Group</legend>
+                              <span>
+                  <input class="custom" type="checkbox" name="groups[]" id="group_0" value="0"/>
+                  <label for="group_0">Group 0</label>
+                </span>
+                              <span>
+                  <input class="custom" type="checkbox" name="groups[]" id="group_1" value="1"/>
+                  <label for="group_1">Group 1</label>
+                </span>
+                              <span>
+                  <input class="custom" type="checkbox" name="groups[]" id="group_2" value="2"/>
+                  <label for="group_2">Group 2</label>
+                </span>
+                              <span>
+                  <input class="custom" type="checkbox" name="groups[]" id="group_3" value="3"/>
+                  <label for="group_3">Group 3</label>
+                </span>
+                              <span>
+                  <input class="custom" type="checkbox" name="groups[]" id="group_4" value="4"/>
+                  <label for="group_4">Group 4</label>
+                </span>
+                              <span>
+                  <input class="custom" type="checkbox" name="groups[]" id="group_5" value="5"/>
+                  <label for="group_5">Group 5</label>
+                </span>
+              
+            </fieldset>
+            <div>
+              <hr>
+                <span>
+                  <input data-filter class="custom" type="checkbox" name="active" id="checkbox_single" value="1"/>
+                  <label for="checkbox_single">Active</label>
+                </span>
+            </div>
+            <hr>
+            <div class="button-group small">
+              <button type="reset" class="button alert">Reset</button>
+              <button type="submit" class="button hide-for-medium success">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="cell medium-8">
+        <p data-ajaxify-num-results="events">There were <strong class="value"></strong> results for your search/filters</p>
+        <div data-ajaxify id="events">
+          <div class="loader"><div></div><div></div><div></div><div></div></div>
+        </div>
+        <div data-ajaxify-no-results="events" class="hide">
+          <p>There were no results for your search/filters</p>
+        </div>
+        <div data-ajaxify-pagination="events"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="grid-container">
+    <h2>Partial include</h2>
+    <div>
+      <div class="card">
+      <div class="card-section">
+        <h2>Event 1</h2>
+        <p></p>
+                <ul>
+                  </ul>
+        <ul>
+                  </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  </div>
+</section>

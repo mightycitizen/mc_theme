@@ -1,0 +1,29 @@
+{
+  "id": "example-tabs",
+  "tabs": [
+    {
+      "text": "View",
+      "id": "view",
+      "is_active": true,
+      "content": "Lorem ipsum 1"
+    },
+    {
+      "text": "Edit",
+      "id": "edit",
+      "is_active": false,
+      "content": "Lorem ipsum 2"
+    },
+    {
+      "text": "Delete",
+      "id": "delete",
+      "is_active": false,
+      "content": "Lorem ipsum 3"
+    },
+    {
+      "text": "Revisions",
+      "id": "revisions",
+      "is_active": false,
+      "content": "Lorem ipsum 4"
+    }
+  ]
+}

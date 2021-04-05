@@ -1,0 +1,11 @@
+  <fieldset class="options">
+    <legend>Checkbox {% if required %}*{% endif %}</legend>
+    <ul class="checkbox-group no-bullet">
+      <li><label for="checkbox1{{ field_append }}"><input id="checkbox1{{ field_append }}" name="checkbox{{ field_append }}" value="A" type="checkbox" {% if required %}required {% endif %}> Choice A</label></li>
+      <li><label for="checkbox2{{ field_append }}"><input id="checkbox2{{ field_append }}" name="checkbox{{ field_append }}" value="B" type="checkbox" {% if required %}required {% endif %}> Choice B</label></li>
+      <li><label for="checkbox3{{ field_append }}"><input id="checkbox3{{ field_append }}" name="checkbox{{ field_append }}" value="C" type="checkbox" {% if required %}required {% endif %}> Choice C</label></li>
+    </ul>
+    {% if required %}
+      <span class="form-error">Checkbox is required</span>
+    {% endif %}
+  </fieldset>

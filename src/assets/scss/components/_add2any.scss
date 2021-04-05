@@ -1,0 +1,17 @@
+
+.a2a{
+  &_svg{
+    max-width: rem-calc(25);
+    max-height: rem-calc(25);
+    margin-right: rem-calc(15);
+    background-color: $primary-color !important;
+  }
+  &_kit{
+    margin-bottom: rem-calc(35);
+    &_label{
+      display: block;
+      font-weight: bold;
+      margin-bottom: rem-calc(15);
+    }
+  }
+}

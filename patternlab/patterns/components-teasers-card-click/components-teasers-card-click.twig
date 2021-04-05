@@ -1,0 +1,22 @@
+<div class="card {{ card.modifier }} {% if card.clickCard %}card--click{% endif %}" >
+  {% if card.header is not empty %}
+  <div class="card-divider">
+    {{ card.header }}
+  </div>
+  {% endif %}
+  {% if card.image is not empty %}
+    <div class="card-image">
+      <img src="{{ card.image.src }}" alt="{{ card.image.alt }}">
+    </div>
+  {% endif %}
+  <div class="card-section">
+    <h{{ card.heading.level }} class="card-title {{ card.heading.modifier }}">{{ card.heading.text }}</h{{ card.heading.level }}>
+    {% if card.summary is not empty %}
+
+      <p>{{ card.summary }}</p>
+    {% endif %}
+    {% if card.link is not empty %}
+      <a href="{{ card.link.url }}" class="button">{{ card.link.text }}</a>
+    {% endif %}
+  </div>
+</div>

@@ -1,0 +1,95 @@
+<section class="section bg-primary-darker">
+  <div class="grid-container">
+    <h2>Ajax</h2>
+    <div class="grid-x grid-margin-x" data-sticky-container id="event-content">
+      <div class="cell medium-4" >
+        <a href="#filters" data-lity class="hide-for-medium button">Filters</a>
+        <div id="filters" class="lity-mobile">
+          <form data-ajaxify-form="events" data-sticky data-sticky-on="medium" data-anchor="event-content">
+            <div data-ajaxify-toggles="events" class="button-group tiny"></div>
+            <div>
+              <label for="keywords">Keywords</label>
+              <div class="input-group simple">
+                <div class="input-wrapper">
+                  <input type="hidden" name="keywords_fields" value="title,description"><!-- if hitting the endpoint to filter, otherwise use data-filter-keywords below -->
+                  <input type="text" id="keywords" placeholder="Search title, description" data-filter-keywords="title,description" name="keywords" class="input-group-field">
+                  <button type="button" data-clear="keywords" class="input-clear">
+                    <span class="icon-cross"></span>
+                    <span class="show-for-sr">Clear keywords</span>
+                  </button>
+                </div>
+                <div class="input-group-button">
+                  <button type="button"  value="Submit">
+                    <span class="show-for-sr">Search</span>
+                    <span class="icon-search"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <fieldset>
+              <legend>Radio Category</legend>
+              <span>
+                <input data-filter class="custom" type="radio" name="categories" id="category_all" value="" checked/>
+                <label for="category_all">All</label>
+              </span>
+              {% for i in range (i, 2) %}
+                <span>
+                  <input data-filter class="custom" type="radio" name="categories" id="category_{{ i }}" value="{{ i }}"/>
+                  <label for="category_{{ i }}">Category {{ i }}</label>
+                </span>
+              {% endfor %}
+            </fieldset>
+            <hr>
+            <fieldset data-filter-checkbox="groups">
+              <legend>Checkbox Group</legend>
+              {% for i in range (i, 5) %}
+                <span>
+                  <input class="custom" type="checkbox" name="groups[]" id="group_{{ i }}" value="{{ i }}"/>
+                  <label for="group_{{ i }}">Group {{ i }}</label>
+                </span>
+              {% endfor %}
+
+            </fieldset>
+            <div>
+              <hr>
+                <span>
+                  <input data-filter class="custom" type="checkbox" name="active" id="checkbox_single" value="1"/>
+                  <label for="checkbox_single">Active</label>
+                </span>
+            </div>
+            <hr>
+            <div class="button-group small">
+              <button type="reset" class="button alert">Reset</button>
+              <button type="submit" class="button hide-for-medium success">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="cell medium-8">
+        <p data-ajaxify-num-results="events">There were <strong class="value"></strong> results for your search/filters</p>
+        <div data-ajaxify id="events">
+          {% include 'components/misc/loader.twig' %}
+        </div>
+        <div data-ajaxify-no-results="events" class="hide">
+          <p>There were no results for your search/filters</p>
+        </div>
+        <div data-ajaxify-pagination="events"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="grid-container">
+    <h2>Partial include</h2>
+    {% include 'components/misc/_event.twig' with {
+      "events": [
+        {
+          "title": "Event 1"
+        }
+      ]
+    } %}
+
+
+  </div>
+</section>

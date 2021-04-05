@@ -1,0 +1,19 @@
+
+.tabs{
+  &-title{
+    button{
+      color: $tab-color;
+      font-size: $tab-item-font-size;
+      padding: $tab-item-padding;
+      &:hover{
+        background-color: $tab-item-background-hover;
+      }
+    }
+    &.is-active{
+      button{
+        background-color: $tab-background-active;
+        color: $tab-active-color;
+      }
+    }
+  }
+}

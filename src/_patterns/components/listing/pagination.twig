@@ -1,0 +1,21 @@
+<nav aria-label="Pagination">
+  <ul class="pagination">
+    {% if links.previous %}
+      <li class="pagination-previous"><a data-ajax-page="{{ links.previous }}" aria-label="Previous page"><span class="show-for-sr">Previous page</span></a></li>
+    {% endif %}
+    {% if links.pages | length %}
+      {% for link in links.pages %}
+        <li>
+          {% if link.current %}
+            <strong><span class="show-for-sr">Page</span> {{ link.pageIndex }}</strong>
+          {% else %}
+            <a data-ajax-page="{{ link.url }}" aria-label="Page {{ link.pageIndex }}"><span class="show-for-sr">Page</span> {{ link.pageIndex }}</a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    {% endif %}
+    {% if links.next %}
+      <li class="pagination-next"><a data-ajax-page="{{ links.next }}" aria-label="Next page"><span class="show-for-sr">Next page</span></a></li>
+    {% endif %}
+  </ul>
+</nav>

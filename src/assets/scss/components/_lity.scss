@@ -1,0 +1,11 @@
+.lity-inline{
+  .lity-content{
+    background-color: map-get($additional-palette,'primary-lightest');
+    margin: rem-calc(0 30);
+    padding: rem-calc(20);
+    width: calc(100% - #{rem-calc(60)});
+  }
+  [data-sticky-container]{
+    height: auto !important;
+  }
+}

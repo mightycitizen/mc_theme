@@ -1,0 +1,17 @@
+
+
+{% if breadcrumbs %}
+  <nav role="navigation" aria-labe="You are here:">
+    <ul class="breadcrumbs">
+      {% for item in breadcrumbs %}
+        <li>
+          {% if item.url %}
+            <a href="{{ item.url }}">{{ item.text }}</a>
+          {% else %}
+            <span class="breadcrumb__current">{{ item.text }}</span>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+{% endif %}

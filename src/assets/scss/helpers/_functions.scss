@@ -1,0 +1,6 @@
+@function is-percentage($value) {
+  @return is-number($value) and unit($value) == '%';
+}
+@function is-number($value) {
+  @return type-of($value) == 'number';
+}

@@ -1,0 +1,79 @@
+
+@import "vendor/icomoon/variables";
+ul, ol{
+  &:not([class]){
+    margin-bottom: rem-calc(30);
+    li{
+      margin-bottom: rem-calc(15);
+    }
+    &:not(foo){
+      list-style-type: none;
+      counter-reset: list;
+      li{
+        position: relative;
+        &:before{
+          counter-increment: list;
+          content: counter(list)  ".";
+          position: absolute;
+          right: 100%;
+          margin-right: rem-calc(10);
+          color: $primary-color;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+ul{
+    &:not([class]){
+    &:not(foo){
+      li{
+        &:before{
+          content: '';
+          background-color: $primary-color;
+          width: rem-calc(5);
+          height: rem-calc(5);
+          top: rem-calc(11);
+          border-radius: 100%;
+
+        }
+      }
+    }
+  }
+}
+
+
+blockquote{
+  border-left: 0;
+  position: relative;
+  padding-left: rem-calc(40);
+  &:before{
+    font-family: $icomoon-font-family;
+    content: $icon-quotes-left;
+    position: absolute;
+    left: 0;
+    top: rem-calc(-5);
+    color: $primary-color;
+    font-size: rem-calc(30);
+  }
+}
+
+
+
+
+
+hr{
+  [class*=bg-] &{
+    border-bottom-color: $dark-gray;
+  }
+  [class*=bg-][class*=dark] &{
+    border-bottom-color: $white;
+  }
+}
+
+[class*=bg-][class*=dark]{
+  color: $white;
+  label, .pagination a{
+    color: inherit;
+  }
+}

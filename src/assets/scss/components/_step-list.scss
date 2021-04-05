@@ -1,0 +1,28 @@
+.step-list{
+  counter-set: steps;
+  list-style-type: none;
+  li{
+    counter-increment: steps;
+    position: relative;
+    padding-left: rem-calc(70);
+    margin-left: 0;
+    &:not(:last-child){
+      margin-bottom: rem-calc(30);
+    }
+    > *:last-child{
+      margin-bottom: 0;
+    }
+    &:before{
+      content: counter(steps);
+      position: absolute;
+      width: rem-calc(70);
+      padding-right: rem-calc(20);
+      text-align: right;
+      left: 0;
+      top: rem-calc(-7);
+      font-size: rem-calc(48);
+      font-weight: bold;
+      color: $primary-color;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+
+@include breakpoint(small only){
+	.sticky[data-sticky-on="medium"]{
+		top: auto !important;
+		max-width: none !important;
+	}
+}

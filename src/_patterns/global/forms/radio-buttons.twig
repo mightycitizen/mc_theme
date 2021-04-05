@@ -1,0 +1,13 @@
+
+  <fieldset class="options">
+    <legend>Radio {% if required %}*{% endif %}</legend>
+    <ul class="radio-group no-bullet">
+      <li><label for="radio1{{ field_append }}"><input id="radio1{{ field_append }}" value="1" name="radio{{ field_append }}" type="radio" class="radio" {% if required %}required {% endif %}> Option 1</label></li>
+      <li><label for="radio2{{ field_append }}"><input id="radio2{{ field_append }}" value="2" name="radio{{ field_append }}" type="radio" class="radio" {% if required %}required {% endif %}> Option 2</label></li>
+      <li><label for="radio3{{ field_append }}"><input id="radio3{{ field_append }}" value="3" name="radio{{ field_append }}" type="radio" class="radio" {% if required %}required {% endif %}> Option 3</label></li>
+    </ul>
+    {% if required %}
+      <span class="form-error">Radio is required</span>
+    {% endif %}
+  </fieldset>
+

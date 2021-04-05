@@ -1,0 +1,63 @@
+@import "../vendor/icomoon/variables";
+.accordion{
+  &-heading{
+    &:focus-within{
+      + .accordion-title{
+        background-color: $accordion-item-background-hover;
+      }
+    }
+  }
+  &-title{
+    padding-right: rem-calc(40);
+    width: 100%;
+    text-align: left;
+    &:before{
+      font-family: $icomoon-font-family;
+      content: $icon-chevron-down !important;
+    }
+    .is-active > &{
+      &:before{
+        transform: rotate(180deg);
+      }
+    }
+    &:hover, &:focus{
+      color: $white;
+    }
+    &:focus{
+      background-color: transparent;
+    }
+
+  }
+  &-item{
+    &:not(:last-child){
+      border-bottom: 2px solid $white;
+    }
+  }
+  &--icons{
+    counter-set: steps;
+    .accordion-title{
+      counter-increment: steps;
+      position: relative;
+      padding-left: rem-calc(65);
+      display: flex;
+      .accordion-icon{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        display: inline-flex;
+        font-weight: bold;
+        align-items: center;
+        justify-content: center;
+        padding: rem-calc(15 12);
+        width: rem-calc(50);
+        font-size: rem-calc(18);
+        background-color: map-get($additional-palette, 'primary-darker');
+        &:not([class*=icon-]):before{
+          content: counter(steps);
+          font-size: rem-calc(24);
+        }
+      }
+    }
+  }
+}

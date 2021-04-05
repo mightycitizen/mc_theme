@@ -1,0 +1,13 @@
+
+
+<ul class="accordion {% if modifier %}accordion--{{ modifier }}{% endif %}"  data-accordion data-allow-all-closed="true">
+
+  {% for item in items %}
+    {% if modifier == 'icons' and item.icon is empty %}
+      {% set item = item | merge( { icon: true } ) %}
+    {% endif %}
+    {%
+      include 'components/containers/_accordion-item.twig' with {item: item} only
+    %}
+  {% endfor %}
+</ul>

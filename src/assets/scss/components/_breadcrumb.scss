@@ -1,0 +1,11 @@
+@import '../vendor/icomoon/variables';
+.breadcrumbs{
+  li{
+    &:not(:last-child){
+      &:after{
+        font-family: $icomoon-font-family;
+        content: $icon-chevron-right;
+      }
+    }
+  }
+}

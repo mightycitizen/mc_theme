@@ -1,0 +1,18 @@
+
+
+
+<ul class="tabs" data-tabs id="{{ id }}">
+  {% for tab in tabs %}
+    <li class="tabs-title {{ tab.is_active ? 'is-active' }}"><button data-href="#{{ tab.id }}" aria-selected="true">{{ tab.text }}</button></li>
+  {% endfor %}
+</ul>
+
+<div class="tabs-content" data-tabs-content="{{ id }}">
+
+    {% for tab in tabs %}
+      <div tabindex="0" id="{{ tab.id }}" class="tabs-panel {{tab.is_active ? 'is-active'}}">
+        {{ tab.content }}
+      </div>
+    {% endfor %}
+
+</div>

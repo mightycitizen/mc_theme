@@ -1,0 +1,90 @@
+{#
+/**
+ * @file
+ * Display for theme color swatches.
+ *
+ * Each color swatch is populated from the json file within
+ * this same directory (colors.json). Add or remove
+ * any colors there.
+ */
+#}
+
+
+{% set sections = {
+    "Brand": [
+      {
+        "name": "Primary",
+        "colors": primary
+      },
+      {
+        "name": "Secondary",
+        "colors": secondary
+      },
+      {
+        "name": "Tertiary",
+        "colors": tertiary
+      }
+    ],
+    "Accent": [
+      {
+        "name": "Accent",
+        "colors": accent
+      }
+    ],
+    "Neutrals": [
+      {
+        "name": "Black",
+        "hex": black
+      },
+      {
+        "name": "White",
+        "hex": white
+      },
+      {
+        "name": "Gray",
+        "colors": gray
+      }
+    ],
+    "Supporting": [
+      {
+        "name": "Success",
+        "hex": success
+      },
+      {
+        "name": "Alert",
+        "hex": alert
+      },
+      {
+        "name": "Warning",
+        "hex": warning
+      }
+    ]
+  }
+
+%}
+
+{% for title, section in sections %}
+  <h3>{{ title }}</h3>
+  {% for color in section %}
+
+    {% if color.colors.default %}
+      <div>
+        {% include 'global/base/_swatch.twig' with {
+            hex: color.colors.default
+          }%}
+
+
+        {% for key, value in color.colors.variants %}
+          {% include 'global/base/_swatch.twig' with {
+              type: key
+            }%}
+        {% endfor %}
+      </div>
+
+    {% else %}
+      {% include 'global/base/_swatch.twig' with {
+        hex: color.hex
+      }%}
+    {% endif %}
+  {% endfor %}
+{% endfor %}

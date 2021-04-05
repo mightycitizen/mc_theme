@@ -1,0 +1,21 @@
+{
+  "links": {
+    "previous": "#",
+    "pages": [
+      {
+        "url": "",
+        "pageIndex": 1,
+        "current": true
+      },
+      {
+        "url": "",
+        "pageIndex": 2
+      },
+      {
+        "url": "",
+        "pageIndex": 3
+      }
+    ],
+    "next": "#"
+  }
+}

@@ -1,0 +1,101 @@
+$hamburger-color: $primary-color;
+.hamburger{
+
+  background: transparent;
+  position: relative;
+  z-index: 3;
+  text-transform: uppercase;
+  color: $white;
+  border: 0;
+  //padding: rem-calc(43 30 18);
+  font-size: rem-calc(11);
+  font-weight: bold;
+  text-align: center;
+  &:focus{
+    outline: none;
+  }
+  &-icon{
+    position: relative;
+    $menu-toggle-padding: 10;
+    display: block;
+    width: rem-calc(30);
+    height: rem-calc(20);
+
+    cursor: pointer;
+
+    &:before, &:after, &-bar{
+      content: "";
+      left: 0;
+      background: $hamburger-color;
+      height: rem-calc(3);
+      position: absolute;
+      width: 100%;
+      transition: 0.15s transform, 0.025s top;
+      transform-origin: center;
+      pointer-events: none;
+    }
+    &-bar{
+      @include vertical-center;
+    }
+
+    &:before{
+      transform: translateY(0px);
+    }
+    &:after{
+      transform: translateY(18px);
+    }
+  }
+  &-text{
+    margin-top: rem-calc(6);
+    display: block;
+    position: relative;
+    &:after{
+      content: "Close";
+      color: transparent;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &:not(.is-active){
+    .hamburger{
+      &-icon{
+        &-bar{
+          transition: 0.3s opacity;
+        }
+      }
+    }
+  }
+  &.is-active{
+    //display: none;
+    .hamburger{
+      &-text{
+        margin-top: rem-calc(25);
+        &:after{
+          color: $secondary-color;
+        }
+      }
+      &-icon{
+        margin-top: rem-calc(-19);
+        &-bar, &:before, &:after{
+          background-color: $secondary-color;;
+        }
+        &-bar{
+          opacity: 0;
+        }
+        &:before, &:after{
+          top: rem-calc(25);
+        }
+        &:before{
+          transform: rotate(45deg);
+        }
+        &:after{
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+
+  }
+
+}

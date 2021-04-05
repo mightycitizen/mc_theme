@@ -1,0 +1,28 @@
+.icon{
+  &.tiny{
+    font-size: rem-calc(10);
+  }
+  &.small{
+    font-size: rem-calc(14);
+  }
+  &.medium{
+    font-size: rem-calc(20);
+  }
+  &.large{
+    font-size: rem-calc(26);
+  }
+  &--circle{
+    background-color: $primary-color;
+    width: rem-calc(30);
+    height: rem-calc(30);
+    color: $white;
+    border-radius: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    &:hover, &:focus{
+      color: $white;
+      background-color: $secondary-color;
+    }
+  }
+}

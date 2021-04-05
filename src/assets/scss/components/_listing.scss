@@ -1,0 +1,12 @@
+.listing{
+  .item{
+    *:last-child{
+      margin-bottom: 0;
+    }
+    &:not(:last-child){
+      border-bottom: 1px solid $medium-gray;
+      margin-bottom: rem-calc(20);
+      padding-bottom: rem-calc(20);
+    }
+  }
+}

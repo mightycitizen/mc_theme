@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Event 2",
+    "categories": [],
+    "url": "https://craft-patternlab2.ddev.site/events/event-2"
+  }, {
+    "title": "Event 1",
+    "categories": [{
+      "id": 2,
+      "title": "Category 1",
+      "url": null
+    }],
+    "url": "https://craft-patternlab2.ddev.site/events/event-1"
+  }]

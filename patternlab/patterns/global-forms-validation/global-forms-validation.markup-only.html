@@ -1,0 +1,33 @@
+<form action="" data-abide novalidate>
+  <div class="form-control">
+    <label for="text">Text *</label>
+    <input type="text" id="text" required>
+    <span class="form-error">Text is required</span>
+  </div>
+  <div class="form-control">
+    
+  <fieldset class="options">
+    <legend>Radio *</legend>
+    <ul class="radio-group no-bullet">
+      <li><label for="radio1_validation"><input id="radio1_validation" value="1" name="radio_validation" type="radio" class="radio" required > Option 1</label></li>
+      <li><label for="radio2_validation"><input id="radio2_validation" value="2" name="radio_validation" type="radio" class="radio" required > Option 2</label></li>
+      <li><label for="radio3_validation"><input id="radio3_validation" value="3" name="radio_validation" type="radio" class="radio" required > Option 3</label></li>
+    </ul>
+          <span class="form-error">Radio is required</span>
+      </fieldset>
+
+  </div>
+  <div class="form-control">
+      <fieldset class="options">
+    <legend>Checkbox *</legend>
+    <ul class="checkbox-group no-bullet">
+      <li><label for="checkbox1_validation"><input id="checkbox1_validation" name="checkbox_validation" value="A" type="checkbox" required > Choice A</label></li>
+      <li><label for="checkbox2_validation"><input id="checkbox2_validation" name="checkbox_validation" value="B" type="checkbox" required > Choice B</label></li>
+      <li><label for="checkbox3_validation"><input id="checkbox3_validation" name="checkbox_validation" value="C" type="checkbox" required > Choice C</label></li>
+    </ul>
+          <span class="form-error">Checkbox is required</span>
+      </fieldset>
+  </div>
+
+  <button type="submit" class="button">Submit</button>
+</form>

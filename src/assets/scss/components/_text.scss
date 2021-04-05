@@ -1,0 +1,22 @@
+.helper{
+  font-size: rem-calc(14);
+}
+
+.label{
+  font-weight: $global-weight-bold;
+  text-transform: uppercase;
+  font-size: rem-calc(14);
+  letter-spacing: 0.02;
+}
+
+.meta{
+  font-weight: $global-weight-bold;
+}
+
+.divider{
+  display: inline-block;
+  margin: rem-calc(0 10);
+  &:after{
+    content: "|";
+  }
+}

@@ -1,0 +1,34 @@
+html, body, .l-wrapper{
+  min-height: 100vh;
+  //background: map-get($additional-palette, 'primary-lightest');
+  //background-position: center;
+}
+
+
+.l-wrapper{
+  display: flex;
+  flex-direction: column;
+//  min-height: 100%;
+}
+
+.l-main{
+  flex: 1;
+}
+
+.l-header{
+  padding: rem-calc(30 0);
+  background-color: map-get($additional-palette,'secondary-darkest');
+  color: $white;
+  flex: none;
+  .search-toggle{
+    color: inherit;
+  }
+}
+
+
+.l-footer{
+  padding: rem-calc(30 0);
+  background-color: $black;
+  color: $white;
+  flex: none;
+}
