@@ -4,10 +4,15 @@
   ]
 %}
 <div {{ attributes.addClass(classes) }}>
-
-  {% if page.header %}
-    {{ page.header }}
-  {% endif %}
+  <header>
+    <div class="grid-container">
+      <div class="layout-header cell small-12">
+        {% if page.header %}
+          {{ page.header }}
+        {% endif %}
+      </div>
+    </div>
+  </header>
 
   <main role="main" class="grid-container">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
@@ -20,9 +25,12 @@
   </main>
 
   <footer>
-    {% if page.footer %}
-      {{ page.footer }}
-    {% endif %}
+    <div class="grid-container">
+      <div class="layout-footer cell small-12">
+        {% if page.footer %}
+          {{ page.footer }}
+        {% endif %}
+      </div>
+    </div>
   </footer>
-
 </div>

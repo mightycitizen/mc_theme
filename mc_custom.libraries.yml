@@ -1,13 +1,12 @@
-global-styling:
+global:
   version: 1.x
   css:
     theme:
-      dist/css/app.css: { preprocess: false }
-      dist/css/styles.css: { preprocess: false }
+      dist/css/all.css: { preprocess: false }
   js:
-    dist/js/foundation-starter.js: { }
-    dist/js/foundation.js: { }
-    dist/js/global.js: { }
-  dependencies:
-    - core/drupal
-    - core/jquery
+    dist/js/app.js: { }
+    dependencies:
+      - core/drupal
+      - core/drupalSettings
+      - core/jquery.once
+      - core/jquery
